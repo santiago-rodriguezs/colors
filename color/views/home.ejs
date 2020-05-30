@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color color...</title>
+</head>
+<body <%= color ? 'style=background-color:' + color : '' %> >
+    <h1>Color color...</h1>
+    <% if(color) { %>
+        <h2>El color elegido es <%= color %></h2>
+    <% } %>
+    <form action="/" method="POST">
+        <label for="color">Elige tu color favorito:</label>
+        <select name="color" id="">
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="yellow">yellow</option>
+            <option value="green">green</option>
+            <option value="tomato">tomato</option>
+            <option value="fuchsia">fuchsia</option>
+            <option value="violet">violet</option>
+            <option value="coral">coral</option>
+            <option value="aqua">aqua</option>
+            <option value="pink">pink</option>
+        </select>
+        <label for="recordar">Desea recordar el color?</label>
+        <input type="checkbox" name="recordar" id="">
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/borrar">Eliminar color</a>
+</body>
+</html>
